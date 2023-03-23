@@ -1,0 +1,11 @@
+.signin input {
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    height: 45px;
+    text-align: center;
+    outline: none;
+}

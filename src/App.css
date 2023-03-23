@@ -1,0 +1,11 @@
+.App {
+    text-align: center;
+}
+input[placeholder='Search..'] {
+    width: 85%;
+    height: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: inherit;
+}

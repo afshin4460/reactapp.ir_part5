@@ -1,0 +1,39 @@
+.menuItem {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menuItem a {
+    color: #9e9e9e;
+    text-decoration: none;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: bold;
+}
+.menuItem a:active, .menuItem a.active {
+    cursor: pointer;
+    color: red;
+}
+.menuItem a:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+@media(max-width: 599px) {
+
+    .menuItem {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menuItem a {
+        width: 100%;
+        padding-right: 0;
+    }
+}
