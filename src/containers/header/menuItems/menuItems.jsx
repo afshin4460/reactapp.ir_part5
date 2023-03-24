@@ -6,7 +6,7 @@ function MenuItems() {
     return (
         <ul className='menuItems'>
             <MenuItem link='/' acitve>صفحه اصلی</MenuItem>
-            <MenuItem link='/'>لیست دانشجویان</MenuItem>
+            <MenuItem link='/add-student'>اضافه کردن دانشجو</MenuItem>
         </ul>
     );
 }
