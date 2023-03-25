@@ -1,5 +1,6 @@
 import React from 'react';
 import './menuItem.css';
+import { Link } from 'react-router-dom';
 
 function MenuItem(props) {
     const classes = [];
@@ -8,7 +9,7 @@ function MenuItem(props) {
     }
     return (
         <li className="menuItem">
-            <a href={props.link} className={classes}>{props.children}</a>
+            <Link to={props.link} className={classes}>{props.children}</Link>
         </li>
     );
 }

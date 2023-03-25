@@ -6,7 +6,12 @@ function MenuItems() {
     return (
         <ul className='menuItems'>
             <MenuItem link='/' acitve>صفحه اصلی</MenuItem>
-            <MenuItem link='/add-student'>اضافه کردن دانشجو</MenuItem>
+            <MenuItem link={{
+                pathname: '/add-student',
+                search: '?sort=name',
+                hash: '#the-hash',
+                state: {fromDashboard: true}
+            }}>اضافه کردن دانشجو</MenuItem>
         </ul>
     );
 }

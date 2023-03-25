@@ -14,7 +14,6 @@ function App() {
                     <Route path='/add-student' element={<h1 style={{marginTop:'65px'}}>Mafakheri</h1>} />
                 </Routes>
             </div>
-            
         </BrowserRouter> 
     );
 }
