@@ -106,7 +106,7 @@ function App2() {
                 deleted={deleteStudent}
                 toggle={toggle}
             />
-            <Button btnType='danger' clicked={executeScroll}>Click To Scroll Top</Button>
+            <Button btnType='danger' clicked={executeScroll}>Click Scroll To Top</Button>
         </div>
     );
 }

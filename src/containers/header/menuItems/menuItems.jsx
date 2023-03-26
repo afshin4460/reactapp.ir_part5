@@ -5,7 +5,7 @@ import MenuItem from './menuItem/menuItem';
 function MenuItems() {
     return (
         <ul className='menuItems'>
-            <MenuItem link='/' acitve>صفحه اصلی</MenuItem>
+            <MenuItem link='/'>صفحه اصلی</MenuItem>
             <MenuItem link={{
                 pathname: '/add-student',
                 search: '?sort=name',

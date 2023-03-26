@@ -16,7 +16,6 @@
 }
 .menuItem a:active, .menuItem a.active {
     cursor: pointer;
-    color: red;
 }
 .menuItem a:hover {
     cursor: pointer;
