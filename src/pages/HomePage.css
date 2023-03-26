@@ -1,8 +1,16 @@
 input[placeholder='Search..'] {
-    width: 85%;
+    width: 15%;
     height: 20px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
+    border: 2px solid salmon;
     margin-top: 65px;
     font-size: inherit;
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: width .5s ease-out;
+}
+
+input[placeholder='Search..']:focus {
+    width: 85%;
 }

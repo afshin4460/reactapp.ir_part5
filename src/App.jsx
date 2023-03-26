@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Toolbar from './containers/header/toolbar/toolbar';
 import HomePage from './pages/HomePage';
+import AddStudent from './pages/AddStudent';
 
 function App() {
     return (
@@ -11,7 +12,7 @@ function App() {
                 <Toolbar />
                 <Routes>
                     <Route path='/' element={<HomePage />} />
-                    <Route path='/add-student' element={<h1 style={{marginTop:'65px'}}>Mafakheri</h1>} />
+                    <Route path='/add-student' element={<AddStudent />} />
                 </Routes>
             </div>
         </BrowserRouter> 
