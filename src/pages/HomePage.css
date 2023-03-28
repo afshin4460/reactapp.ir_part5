@@ -4,7 +4,6 @@ input[placeholder='Search..'] {
     padding: 10px;
     border-radius: 20px;
     border: 2px solid salmon;
-    margin-top: 65px;
     font-size: inherit;
     color: blue;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -13,4 +12,10 @@ input[placeholder='Search..'] {
 
 input[placeholder='Search..']:focus {
     width: 85%;
+}
+
+@media(max-width: 1129px) {
+    .change {
+        display: none;
+    }
 }

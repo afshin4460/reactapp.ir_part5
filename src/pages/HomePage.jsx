@@ -56,7 +56,9 @@ function HomePage() {
     return (
         <>
             <input type="text" placeholder='Search..' value={searchBarValue} onChange={searchFilterFunction} ref={inputEl} />
-            <Button btnType='success' clicked={handleToggle}>تغییر وضعیت نمایش</Button>
+            <div className="change">
+                <Button btnType='success' clicked={handleToggle}>تغییر وضعیت نمایش</Button>
+            </div>
             <Students
                 studentsList={studentsState}
                 nameChanged={handleNameChange}

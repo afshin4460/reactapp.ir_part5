@@ -4,16 +4,20 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Toolbar from './containers/header/toolbar/toolbar';
 import HomePage from './pages/HomePage';
 import AddStudent from './pages/AddStudent';
+import EditStudent from './pages/EditStudent';
 
 function App() {
     return (
         <BrowserRouter>
             <div className="App">
                 <Toolbar />
-                <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    <Route path='/add-student' element={<AddStudent />} />
-                </Routes>
+                <div style={{marginTop: '65px'}}>
+                    <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        <Route path='add-student' element={<AddStudent />} />
+                        <Route path='student/:studentid' element={<EditStudent />} />
+                    </Routes>
+                </div>
             </div>
         </BrowserRouter> 
     );
