@@ -11,16 +11,6 @@ function HomePage() {
         {id: 2, name: 'Ali', classNumber: 224, phoneNumber: 1234567, email: 'afshin.m4460@gmail.com'},
         {id: 3, name: 'Amir', classNumber: 234, phoneNumber: 12345678, email: 'afshin.m4460@gmail.com'}
     ]);
-    const handleNameChange = (id, event) => {
-        const studentIndex = studentsState.findIndex((student) => {
-            return student.id === id;
-        });
-        const newStudent = {...studentsState[studentIndex]};
-        newStudent.name = event.target.vaule;
-        const newStudents = [...studentsState];
-        newStudents[studentIndex] = newStudent;
-        setStudents(newStudents);
-    };
     const deleteStudent = (id) => {
         const studentIndex = studentsState.findIndex((student) => {
             return student.id === id;
@@ -29,7 +19,7 @@ function HomePage() {
         students.splice(studentIndex, 1);
         setStudents(students);
     };
-    const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(true);
     const handleToggle = () => {
         setToggle(!toggle);
     };
@@ -61,7 +51,6 @@ function HomePage() {
             </div>
             <Students
                 studentsList={studentsState}
-                nameChanged={handleNameChange}
                 deleted={deleteStudent}
                 toggle={toggle}
             />
