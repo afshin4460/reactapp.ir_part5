@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import NewStudent from '../components/students/student/newStudent/newStudents';
+import { Navigate } from 'react-router-dom';
 
-function AddStudent(props) {
-    useEffect(() => {
-        
-    }, [])
+function AddStudent() {
     const [studentName, setStudentName] = useState('');
     const [studentClass, setStudentClass] = useState('');
     const [studentPhone, setStudentPhone] = useState('');
@@ -21,22 +19,31 @@ function AddStudent(props) {
     const studentEmailHandler = (event) => {
         setStudentEmail(event.target.value);
     };
+    const [result, setResult] = useState(false);
     const addStudentHandler = () => {
         alert('student added');
+        setResult(true);
     };
+    let redirect = null;
+    if (result) {
+        redirect = <Navigate to='/' replace />;
+    }
 
     return (
-        <NewStudent
-            studentName={studentName}
-            studentClass={studentClass}
-            studentPhone={studentPhone}
-            studentEmail={studentEmail}
-            studentNameHandler={studentNameHandler}
-            studentClassHandler={studentClassHandler}
-            studentPhoneHandler={studentPhoneHandler}
-            studentEmailHandler={studentEmailHandler}
-            addStudent={addStudentHandler}
-        />
+        <>
+            {redirect}
+            <NewStudent
+                studentName={studentName}
+                studentClass={studentClass}
+                studentPhone={studentPhone}
+                studentEmail={studentEmail}
+                studentNameHandler={studentNameHandler}
+                studentClassHandler={studentClassHandler}
+                studentPhoneHandler={studentPhoneHandler}
+                studentEmailHandler={studentEmailHandler}
+                addStudent={addStudentHandler}
+            />
+        </>
     );
 }
 
