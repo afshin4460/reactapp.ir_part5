@@ -2,9 +2,13 @@ import React from 'react';
 import './student.css';
 import Button from '../../ui/button/button';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Student(props) {
+    const navigate = useNavigate();
+    const handleEdit = () => {
+        navigate(`/student/${props.id + 1}`);
+    };
     return (
         <div className='students'>
             <label>شماره دانشجویی: {props.id + 1}</label>
@@ -14,9 +18,7 @@ function Student(props) {
             <label>{props.email} :ایمیل</label>
             <div style={{display:'flex', direction: 'rtl'}}>
                 <Button clicked={props.deleted} btnType='danger'>حذف</Button>
-                <Link to={`/student/${props.id + 1}`}>
-                    <Button btnType='success'>ویرایش</Button>
-                </Link>
+                <Button clicked={handleEdit} btnType='success'>ویرایش</Button>
             </div>
         </div>
     );
