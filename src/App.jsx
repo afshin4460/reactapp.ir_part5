@@ -16,6 +16,7 @@ function App() {
                         <Route path='/' element={<HomePage />} />
                         <Route path='add-student' element={<AddStudent />} />
                         <Route path='student/:studentId' element={<EditStudent />} />
+                        <Route path='*' element={<h1>Not Found</h1>} />
                     </Routes>
                 </div>
             </div>
